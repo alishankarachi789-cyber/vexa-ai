@@ -1,0 +1,5 @@
+*{margin:0;padding:0;box-sizing:border-box}body{background:#000;color:#fff;font-family:system-ui}button{cursor:pointer}
+.vexa-header{padding:20px;text-align:center;font-size:28px;font-weight:bold;background:linear-gradient(90deg,#a855f7,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.vexa-card{max-width:500px;margin:20px auto;padding:20px;background:#111;border-radius:16px;border:1px solid #222}
+.vexa-btn{width:100%;padding:14px;background:#a855f7;color:white;border:none;border-radius:10px;font-size:16px;font-weight:bold}
+.vexa-input{width:100%;padding:14px;background:#222;color:white;border:1px solid #333;border-radius:10px;margin:10px 0}
