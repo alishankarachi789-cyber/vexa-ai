@@ -1,0 +1,9 @@
+{
+  "name": "VEXA AI",
+  "short_name": "VEXA",
+  "description": "Super Intelligence Video Generator",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#a855f7"
+}
