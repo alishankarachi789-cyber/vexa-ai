@@ -1,28 +1,15 @@
-'use client'
+''use client'
 import { useState } from 'react'
+
 export default function Home(){
+  const [lang,setLang]=useState('en')
   const [prompt,setPrompt]=useState('')
+  const [img,setImg]=useState(null)
+  const [imgPrev,setImgPrev]=useState('')
   const [video,setVideo]=useState('')
   const [loading,setLoading]=useState(false)
-  const gen=()=>{
-    if(!prompt) return alert('Prompt likho!')
-    setLoading(true)
-    setTimeout(()=>{
-      setVideo('https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4')
-      setLoading(false)
-    },2000)
-  }
-  return(
-    <main>
-      <div className="vexa-header">VEXA AI</div>
-      <div style={{textAlign:'center',opacity:0.7}}>Super Intelligence Video Generator</div>
-      <div className="vexa-card">
-        <h3>Bolo kisi bhi zaban me - Video banao!</h3>
-        <input className="vexa-input" value={prompt} onChange={e=>setPrompt(e.target.value)} placeholder="Ek sher jungle me chal raha hai, cinematic..." />
-        <button className="vexa-btn" onClick={gen}>{loading?'Ban raha hai...':'Video Generate Karo 🚀'}</button>
-        {video && <div style={{marginTop:20}}><video controls src={video} style={{width:'100%',borderRadius:10}}></video><a href={video} download style={{display:'block',marginTop:10,textAlign:'center',color:'#a855f7'}}>Download Video</a></div>}
-        <div style={{marginTop:20,fontSize:12,opacity:0.5}}>Powered by VEXA AI - Karachi</div>
-      </div>
-    </main>
-  )
-                             }
+  const [data,setData]=useState({name:'',jhula:'',loc:'',action:'',time:'8',style:'realistic'})
+  const [msgs,setMsgs]=useState([{r:'ai',t:'Hello! I am VEXA AI. Auto language. Type in Urdu or English. I reply in same language. I will make video ONLY what you say.'}])
+
+  const detect=(t)=>/[\u0600-\u06FF]/.test(t)?'ur':'en'
+  const add=(r,t)=>{setMsgs(m=>[...m,{r,t
